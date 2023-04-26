@@ -48,18 +48,6 @@ namespace WebApi_BMI.Controllers
                 answer += description[i] + " - " + (Math.Round(count[i]*100)).ToString() + "%; ";
             return answer;//вывожу статистику
         }
-        private void Swap(List<double> list, int firstIndex, int secondIndex)//меняю элементы списка местами
-        {
-            double tmp = list[firstIndex];
-            list[firstIndex] = list[secondIndex];
-            list[secondIndex] = tmp;
-        }
-        private void Swap(List<string> list, int firstIndex, int secondIndex)//меняю элементы списка местами
-        {
-            string tmp = list[firstIndex];
-            list[firstIndex] = list[secondIndex];
-            list[secondIndex] = tmp;
-        }
         private double BodyMassIndex(double height, double weight)//считаю индекс массы тела
         {
             height /= 100;
